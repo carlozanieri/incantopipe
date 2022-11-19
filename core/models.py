@@ -20,6 +20,8 @@ class Item(models.Model) :
     category = models.CharField(choices=CATEGORY, max_length=2)
     label = models.CharField(choices=LABEL, max_length=2)
     description = models.TextField()
+    immagine = models.CharField(max_length=100)
+    price = models.FloatField()
 
     def __str__(self):
         return self.item_name
