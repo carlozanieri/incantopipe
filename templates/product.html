@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+{% load static %}
 <!--Main layout-->
   <main class="mt-5 pt-4">
     <div class="container dark-grey-text mt-5">
@@ -28,7 +28,7 @@
                 <span class="badge purple mr-1">{{ object.get_category_display }}</span>
               </a>
               <a href="">
-                <span class="badge blue mr-1">{{ object.get_label_displa }}</span>
+                <span class="badge blue mr-1">{{ object.get_label_display }}</span>
               </a>
             </div>
 
@@ -36,11 +36,11 @@
 
             {% if object.discount_price %}
               <span class="mr-1">
-              <del>${{ object.price }}</del>
+              <del>€{{ object.price }}</del>
               </span>
-              <span>${{ object.discount_price }}</span>
+              <span>€{{ object.discount_price }}</span>
             {% else %}
-             <span>${{ item.price }}</span>
+             <span>€{{ item.price }}</span>
             {% endif %}
 
             </p>
@@ -100,7 +100,7 @@
         <!--Grid column-->
         <div class="col-lg-4 col-md-12 mb-4">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/11.jpg" class="img-fluid" alt="">
+          <img src="{% static 'img/prestige-verde.jpg' %}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -108,7 +108,7 @@
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/12.jpg" class="img-fluid" alt="">
+          <img src="{% static 'img/prestige-arancio.jpg' %}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
@@ -116,7 +116,7 @@
         <!--Grid column-->
         <div class="col-lg-4 col-md-6 mb-4">
 
-          <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/13.jpg" class="img-fluid" alt="">
+          <img src="{% static 'img/prestige-ulivo.jpg' %}" class="img-fluid" alt="">
 
         </div>
         <!--Grid column-->
